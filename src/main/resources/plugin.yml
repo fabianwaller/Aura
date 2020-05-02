@@ -1,0 +1,10 @@
+name: Aura
+version: 1.0
+author: Rewex
+main: de.rewex.aura.Main
+commands:
+  build: #server.build
+  setlocation: #aura.setlocation
+    aliases: [setloc]
+  start: #server.start
+  stats:
