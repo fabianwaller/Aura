@@ -12,7 +12,9 @@ import java.util.ArrayList;
 
 public class InventoryHandler {
 
-    public static Inventory teaminv = Bukkit.createInventory(null, 9, "§7Teamauswahl");
+    private static String teamname = "§d•§5● Teamauswahl";
+    private static String lobbyname = "§4•§c● Verlassen";
+    public static Inventory teaminv = Bukkit.createInventory(null, 9, teamname);
     public static Inventory kitinv = Bukkit.createInventory(null, 45, "§5§lKits");
     public static Inventory erfolgeinv = Bukkit.createInventory(null, 45, "§5§lErfolge");
 
@@ -120,4 +122,7 @@ public class InventoryHandler {
         //erfolgeinv.setItem(22, ItemManager.createItem(Material.BARRIER, 1, 0, "§c§lSoon"));
     }
 
+    public static String getTeamname() {
+        return teamname;
+    }
 }

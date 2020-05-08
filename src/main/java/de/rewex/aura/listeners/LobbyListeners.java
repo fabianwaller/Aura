@@ -27,7 +27,7 @@ public class LobbyListeners implements Listener {
 
                 if(e.getItem() != null) {
 
-                    if(e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase("§7Teamauswahl")) {
+                    if(e.getItem().getItemMeta().getDisplayName().equalsIgnoreCase(InventoryHandler.getTeamname())) {
                         InventoryHandler.fillTeamInv();
                         p.openInventory(InventoryHandler.teaminv);
                         p.playSound(p.getLocation(), Sound.CLICK, 12.0F, 12.0F);
@@ -62,7 +62,7 @@ public class LobbyListeners implements Listener {
             p = (Player) e.getWhoClicked();
         }
 
-        if(e.getInventory().getName().equals("§7Teamauswahl")) {
+        if(e.getInventory().getName().equals(InventoryHandler.getTeamname())) {
             if((e.getCurrentItem() != null) && (e.getCurrentItem().hasItemMeta())) {
 
                 if(e.getCurrentItem().getItemMeta().getDisplayName().equals("§9Team Blau")) {
@@ -96,7 +96,6 @@ public class LobbyListeners implements Listener {
     @EventHandler
     public void onLobbyDamage(EntityDamageEvent e) {
         if((Main.getInstance().state == Gamestate.Lobby) || (Main.getInstance().state == Gamestate.Restarting) || (Countdown.schutzphase == true)) {
-
             e.setCancelled(true);
         }
     }

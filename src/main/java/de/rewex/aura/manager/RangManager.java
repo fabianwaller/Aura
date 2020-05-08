@@ -80,4 +80,40 @@ public class RangManager {
 
     }
 
+    public static String getSecondColor(Player p) {
+        if(p.hasPermission("team.admin")) {
+            return "§c";
+
+        } else if(p.hasPermission("team.mod")) {
+            return "§b";
+
+        } else if(p.hasPermission("team.sup")) {
+            return "§1";
+
+        } else if(p.hasPermission("team.dev")) {
+            return "§5";
+
+        } else if(p.hasPermission("team.builder")) {
+            return "§2";
+
+        } else if(p.hasPermission("team.content")) {
+            return "§1";
+
+        } else if(p.hasPermission("server.yt")) {
+            return "§d";
+
+        } else if(p.hasPermission("server.titan")) {
+            return "§6";
+
+        } else if(p.hasPermission("server.champ")) {
+            return "§4";
+
+        } else if(p.hasPermission("server.prime")) {
+            return "§e";
+
+        } else {
+            return "§8";
+        }
+    }
+
 }

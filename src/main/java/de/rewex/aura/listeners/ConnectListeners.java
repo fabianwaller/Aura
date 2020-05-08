@@ -64,7 +64,6 @@ public class ConnectListeners implements Listener {
         ScoreAPI.setScoreboard(p);
         Main.getInstance().updateMotd();
 
-        ScoreAPI.setScoreboard(p);
         TitleAPI.sendTabTitle(p, "\n   §9§lRewex.de §8× §7Dein Minigames Netzwerk   "
                         + "\n§7Derzeitiger Server §8× §5Aura #" + Main.getInstance().getAuraConfig().server
                         + "\n ",

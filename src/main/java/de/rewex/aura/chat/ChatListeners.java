@@ -26,7 +26,7 @@ public class ChatListeners implements Listener {
             if(Main.getInstance().state != Gamestate.Ingame) {
 
                 for (Player players : Bukkit.getOnlinePlayers()) {
-                    players.sendMessage(RangManager.getName(p) + " §7» " + msg);
+                    players.sendMessage(RangManager.getRang(p) + " §8● " + RangManager.getName(p) + " §8➜ §7" + msg);
                 }
                 e.setCancelled(true);
 
@@ -34,7 +34,7 @@ public class ChatListeners implements Listener {
             } else {
 
                 for (Player players : Bukkit.getOnlinePlayers()) {
-                    players.sendMessage("§a@all " + ScoreAPI.getName(p) + " §7» " + msg);
+                    players.sendMessage("§5@all §8● " + ScoreAPI.getName(p) + " §8➜ §7" + msg);
                 }
             }
 

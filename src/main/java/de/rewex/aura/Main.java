@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.ListIterator;
 import de.rewex.aura.commands.SetlocCmd;
 import de.rewex.aura.listeners.*;
+import de.rewex.aura.manager.InventoryHandler;
 import de.rewex.aura.manager.utils.ItemBuilder;
 import de.rewex.mysql.MySQL;
 import de.rewex.mysql.players.stats.AuraStatsAPI;
@@ -33,8 +34,8 @@ import de.rewex.aura.manager.utils.TitleAPI;
 
 public class Main extends JavaPlugin {
 
-    public static String prefix = "§7» §5Aura §7| ";
-    public static String passpr = "§7» §6Gamepass §7| ";
+    public static String prefix = "§d•§5● Aura §7| ";
+    public static String passpr = "§e•§6● Gamepass §7| ";
     public static String noperm = prefix + "§cDazu hast du keine Rechte§8!";
     public static String offplayer = prefix + "§cDieser Spieler ist offline§8!";
     public static String noplayer = "[Aura] Nur ein Spieler kann diesen Befehl ausführen";
@@ -168,7 +169,7 @@ public class Main extends JavaPlugin {
             p.removePotionEffect(effect.getType());
         }
 
-        p.getInventory().setItem(0, new ItemBuilder(Material.BOOK,1).setName("§7Teamauswahl").build());
+        p.getInventory().setItem(0, new ItemBuilder(Material.BOOK,1).setName(InventoryHandler.getTeamname()).build());
        // p.getInventory().setItem(1, ItemManager.createItem(Material.ENDER_CHEST, 1, 0, "§5§lKits"));
        // p.getInventory().setItem(8, ItemManager.createItem(Material.NETHER_STAR, 1, 0, "§5§lErfolge"));
         LocationManager.telLocation(p, "wartelobby");
